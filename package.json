@@ -1,0 +1,17 @@
+{
+  "name": "ttalk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bishal Bista",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "prod": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  }
+}
