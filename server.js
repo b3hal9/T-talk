@@ -23,6 +23,10 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit('typing',data)
 
     })
+    socket.on('disconnect', ()=>{
+        console.log('User Disconnected..')
+       
+    });
 })
 
 
