@@ -15,6 +15,7 @@ const io = socket(server)
 
 io.on('connection', (socket)=>{
     console.log('socket connection established.!',socket.id)
+    
     socket.on('chat',(data)=>{
         io.sockets.emit('chat',data)
     })
@@ -24,7 +25,8 @@ io.on('connection', (socket)=>{
 
     })
     socket.on('disconnect', ()=>{
-        console.log('User Disconnected..')
+
+        socket.broadcast.emit('disconnected')
        
     });
 })
